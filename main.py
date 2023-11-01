@@ -14,7 +14,7 @@ def main():
     
     # Create surface of (width, height), and its window.
     mainSurface = pygame.display.set_mode((surfaceSize[0], surfaceSize[1]))
-    mainSurface.fill((0,0,255))
+    mainSurface.fill((0,0,255)) # Makes screen blue
 
     while True:
         ev = pygame.event.poll()
