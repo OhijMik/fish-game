@@ -14,20 +14,20 @@ def main():
     
     # Create surface of (width, height), and its window.
     mainSurface = pygame.display.set_mode((surfaceSize[0], surfaceSize[1]))
-
+    mainSurface.fill((0,0,255))
 
     while True:
-        ev = pygame.event.poll()   
-        if ev.type == pygame.QUIT:  
-            break
+        ev = pygame.event.poll()
+        if ev.type == pygame.QUIT:
+           break
 
         
 
 
-    pygame.display.flip()
+        pygame.display.flip()
     
-    frameCount += 1
-    clock.tick(frameRate) #Force frame rate to be slower
+        frameCount += 1
+        clock.tick(frameRate) #Force frame rate to be slower
 
     pygame.quit()     # Once we leave the loop, close the window.
 # Running the main loop
