@@ -48,7 +48,7 @@ def main():
                 if mousePos[1] >= 400 and mousePos[1] <= 500:
                     pygame.draw.rect(mainSurface, (255, 170, 0), [450,400,400,100], 2)
                     if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
-                        programState = 'levels'
+                        programState = 'game'
                         mouseTime = 0
                 elif mousePos[1] >= 520 and mousePos[1] <= 620:
                     pygame.draw.rect(mainSurface, (255, 170, 0), [450,520,400,100], 2)
@@ -108,6 +108,8 @@ def main():
                 if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
                     programState = 'start'
 
+        elif programState == 'game':
+            print("sus")
 
         pygame.display.flip()
         
