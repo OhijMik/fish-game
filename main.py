@@ -49,6 +49,7 @@ def main():
                     pygame.draw.rect(mainSurface, (255, 170, 0), [310,250,200,60], 2)
                     if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
                         programState = 'game'
+
                 elif mousePos[1] >= 340 and mousePos[1] <= 400:
                     pygame.draw.rect(mainSurface, (255, 170, 0), [310,340,200,60], 2)
                     if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
