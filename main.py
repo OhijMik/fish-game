@@ -36,33 +36,24 @@ def main():
             mainSurface.blit(renderedText, (220,150))
             renderedText = pygame.font.SysFont("Roboto", 60).render("Start", 1, pygame.Color(255, 255, 255))
             mainSurface.blit(renderedText, (360,260))
-            renderedText = pygame.font.SysFont("Roboto", 60).render("Help", 1, pygame.Color(255, 255, 255))
+            renderedText = pygame.font.SysFont("Roboto", 60).render("Quit", 1, pygame.Color(255, 255, 255))
             mainSurface.blit(renderedText, (360,350))
             
             # Button rectangle
-            for i in range(400, 880, 120):
-                pygame.draw.rect(mainSurface, [255, 255, 255], [450,i,400,100], 2)
+            for i in range(250, 410, 90):
+                pygame.draw.rect(mainSurface, [255, 255, 255], [310,i,200,60], 2)
                 
             # If the mouse is touching the button
-            if mousePos[0] >= 450 and mousePos[0] <= 850:
-                if mousePos[1] >= 400 and mousePos[1] <= 500:
-                    pygame.draw.rect(mainSurface, (255, 170, 0), [450,400,400,100], 2)
+            if mousePos[0] >= 310 and mousePos[0] <= 510:
+                if mousePos[1] >= 250 and mousePos[1] <= 310:
+                    pygame.draw.rect(mainSurface, (255, 170, 0), [310,250,200,60], 2)
                     if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
                         programState = 'game'
-                        mouseTime = 0
-                elif mousePos[1] >= 760 and mousePos[1] <= 860:
-                    pygame.draw.rect(mainSurface, (255, 170, 0), [450,760,400,100], 2)
+
+                elif mousePos[1] >= 340 and mousePos[1] <= 400:
+                    pygame.draw.rect(mainSurface, (255, 170, 0), [310,340,200,60], 2)
                     if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
                         break
-
-            # If the mouse is touching the button
-            if mousePos[0] >= 20 and mousePos[0] <= 170 and mousePos[1] >= 890 and mousePos[1] <= 950:
-                pygame.draw.rect(mainSurface, (255, 170, 0), [20,890,150,60], 2)
-                if ev.type == pygame.MOUSEBUTTONDOWN and ev.button == 1:
-                    programState = 'start'
-
-        elif programState == 'game':
-            mainSurface.fill((55,55,55))
 
         pygame.display.flip()
         
